@@ -1,45 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emoji Meanings</title>
+  <title>Accessible Me</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-  <header class="siteheader">
-    <h1>The Meaning of Emojis</h1>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <h1 itemprop="name">Jam Box Studios</h1>
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Reservation</a></li>
+          <li><a href="#">Studio</a></li>
+        </ul>
+      </nav>
+      <img src="https://placekitten.com/1200/900" class="banner" alt="Banner image of Jam Box Studios">
+    </div>
   </header>
-  <main>
-    <div class="emojis">
-      <div class="emoji">
-        <h2>Smiling Face with Smiling Eyes</h2>
-        <span class="icon">😊</span>
-        <p>A yellow face with smiling eyes and a broad, closed smile turning up to rosy cheeks. Often expresses genuine happiness and warm, positive feelings.</p>
-        <a href="https://emojipedia.org/smiling-face-with-smiling-eyes/" target="_blank">Read More about this emoji</a>
-      </div>
-      <div class="emoji">
-        <h2>Clinking Beer Mugs</h2>
-        <span class="icon">🍻</span>
-        <p>Two frosty mugs of beer with frothy heads being clinked together, as done at a celebratory or convivial toast (“Cheers!”). Several platforms include stylized lines to mark the clinking.</p>
-        <a href="https://emojipedia.org/clinking-beer-mugs/" target="_blank">Read More about this emoji</a>
-      </div>
-      <div class="emoji">
-        <h2>Face with Tears of Joy</h2>
-        <span class="icon">😂</span>
-        <p>A yellow face with a big grin, uplifted eyebrows, and smiling eyes, each shedding a tear from laughing so hard. Widely used to show something is funny or pleasing. Named the Oxford Dictionaries 2015 Word of the Year, and the most used emoji on all platforms from 2011-2021.</p>
-        <a href="https://emojipedia.org/face-with-tears-of-joy/" target="_blank">Read More about this emoji</a>
-      </div>
-      <div class="emoji">
-        <h2>Seedling</h2>
-        <span class="icon">🌱</span>
-        <p>A seedling, or a young plant, as a newly sprouted tree. Depicted as a tiny, light-green plant with a short stem and two leaves. Often shown freshly sprung from a small mound of brown earth.</p>
-        <a href="https://emojipedia.org/seedling/" target="_blank">Read More about this emoji</a>
-      </div>
+  <main id="main-content" class="main-content" role="main">
+    <div class="container">
+      <h1>Welcome to Jam Box</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
+      <section class="owner" itemprop="creator" itemscope itemtype="http://schema.org/Person">
+        <h2>Meet the owner</h2>
+        <ul>
+          <li>Name: <span itemprop="name">John Doe</span></li>
+          <li>Title: <span itemprop="jobTitle">CEO</span></li>
+          <li>Email: <a href="mailto:johnjoe@jambox.ca" itemprop="email">johnjoe@jambox.ca</a></li>
+          <li>Phone: <a href="tel:6130000000" itemprop="telephone">613-000-0000</a></li>
+        </ul>
+      </section>
+      <section class="address">
+        <h2>Address</h2>
+        <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <span itemprop="name">Jambox Studios</span><br>
+          <span itemprop="streetAddress">123 Guitar Road</span>,<br>
+          <span itemprop="addressLocality">Musicville</span>, 
+          <span itemprop="addressRegion">Danceistan</span><br>
+          <span itemprop="postalCode">B3T 0L0</span>
+        </p>
+      </section>
+      <section class="contact-section" itemprop="contactPoint" itemscope itemtype="http://schema.org/ContactPoint">
+        <h2>Contact Us</h2>
+        <form action="thanks.html">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Full Name" required aria-required="true">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email" required aria-required="true">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" required aria-required="true">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Your message" required aria-required="true"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
     </div>
   </main>
-</body>
-
-</html>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      &copy; 2021 Jam Box Studios
+    </div>
+  </footer>
